@@ -28,6 +28,8 @@
             color: #fff;
             padding: 0.5rem 0;
             text-align: center;
+            font-size: 1.2rem; /* Increase font size */
+            font-weight: bold; /* Make font bold */
         }
         nav a {
             color: #fff;
@@ -51,16 +53,20 @@
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             color: #fff; /* Make all text white */
+            transition: background 0.3s ease; /* Smooth transition for background color */
+        }
+        .sidebar:hover {
+            background: linear-gradient(to right, #3a8bdb, #00c2e0); /* Darken background on hover */
         }
         .sidebar .sidebar-title {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: #fff; /* Make title text white */
+            font-weight: bold; /* Make title bold */
         }
         .sidebar nav {
             display: flex;
             flex-direction: column;
-            background: transparent;
         }
         .sidebar nav ul {
             list-style-type: disc;
@@ -108,6 +114,18 @@
         @media (max-width: 768px) {
             .container {
                 grid-template-columns: 1fr;
+            }
+            .sidebar {
+                position: fixed;
+                width: 65%;
+                height: 100%;
+                z-index: 1000;
+                left: -65%;
+                transition: left 0.3s ease, background 0.3s ease; /* Smooth transition for position and background color */
+            }
+            .sidebar:hover {
+                left: 0;
+                background: linear-gradient(to right, #3a8bdb, #00c2e0); /* Darken background on hover */
             }
         }
     </style>
