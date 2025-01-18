@@ -52,34 +52,35 @@
             padding: 1rem;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            color: #fff; /* Make all text white */
-            transition: background 0.3s ease; /* Smooth transition for background color */
+            color: #fff;
+            transition: background 0.3s ease;
         }
         .sidebar:hover {
-            background: linear-gradient(to right, #3a8bdb, #00c2e0); /* Darken background on hover */
+            background: linear-gradient(to right, #3a8bdb, #00c2e0);
         }
         .sidebar .sidebar-title {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #fff; /* Make title text white */
-            font-weight: bold; /* Make title bold */
+            color: #fff;
+            font-weight: bold;
         }
         .sidebar nav {
             display: flex;
             flex-direction: column;
+            background: transparent;
         }
         .sidebar nav ul {
             list-style-type: disc;
             padding-left: 1.5rem;
-            text-align: left; /* Align list text to the left */
+            text-align: left;
         }
         .sidebar nav ul li {
             margin: 0.5rem 0;
         }
         .sidebar nav ul li a {
-            color: #fff; /* Make links white */
+            color: #fff;
             text-decoration: none;
-            background: none; /* Remove background color */
+            background: none;
         }
         .sidebar nav ul li a:hover {
             text-decoration: underline;
@@ -94,12 +95,12 @@
             padding: 1rem;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            height: 400px; /* Fixed height */
+            height: 400px;
             overflow: hidden;
         }
         .blog-post {
             height: 100%;
-            overflow-y: auto; /* Make content scrollable */
+            overflow-y: auto;
         }
         .blog-post h2, .blog-post h3 {
             margin-top: 0;
@@ -121,11 +122,11 @@
                 height: 100%;
                 z-index: 1000;
                 left: -65%;
-                transition: left 0.3s ease, background 0.3s ease; /* Smooth transition for position and background color */
+                transition: left 0.3s ease, background 0.3s ease;
             }
             .sidebar:hover {
                 left: 0;
-                background: linear-gradient(to right, #3a8bdb, #00c2e0); /* Darken background on hover */
+                background: linear-gradient(to right, #3a8bdb, #00c2e0);
             }
         }
     </style>
