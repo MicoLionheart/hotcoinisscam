@@ -60,6 +60,12 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             color: #fff;
             transition: background 0.3s ease;
+            position: fixed;
+            width: 65%;
+            height: 100%;
+            z-index: 1000;
+            left: -100%;
+            overflow-y: auto;
         }
         .sidebar:hover {
             background: linear-gradient(to right, #3a8bdb, #00c2e0);
@@ -134,9 +140,6 @@
         @media (max-width: 768px) {
             header {
                 text-align: left;
-                position: sticky;
-                top: 0;
-                z-index: 1002;
             }
             header h1 {
                 margin: 0;
@@ -144,23 +147,17 @@
                 padding-left: 1rem;
                 font-size: 1.5rem;
             }
+<<<<<<< HEAD
+=======
             nav {
                 position: sticky;
                 top: 4rem;
                 z-index: 1001;
-            }
             .container {
                 grid-template-columns: 1fr;
             }
             .sidebar {
-                position: fixed;
-                width: 65%;
-                height: 100%;
-                z-index: 1000;
-                left: -100%;
-                transition: left 0.3s ease, background 0.3s ease;
-                overflow-y: auto;
-            }
+                left: -65%;
             .toggle-button {
                 display: block;
                 z-index: 1002;
@@ -172,13 +169,13 @@
 <body>
     <header>
         <h1>Welcome to My Blog</h1>
+        <button class="toggle-button" onclick="toggleSidebar()">☰</button>
     </header>
     <nav>
         <a href="/hotcoinisscam/">Home</a>
         <a href="/hotcoinisscam/">About</a>
         <a href="/hotcoinisscam/">Contact</a>
     </nav>
-    <button class="toggle-button" onclick="toggleSidebar()">☰</button>
     <div class="container">
         <aside class="sidebar">
             <div class="sidebar-title">About Me</div>
