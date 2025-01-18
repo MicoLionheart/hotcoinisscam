@@ -39,6 +39,11 @@
         nav a:hover {
             text-decoration: underline;
         }
+        header, nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
         .container {
             display: grid;
             grid-template-columns: 1fr 3fr;
@@ -116,7 +121,7 @@
             display: none;
             position: fixed;
             top: 1rem;
-            left: 1rem;
+            right: 1rem; /* Move to the right side */
             background: #4facfe;
             color: #fff;
             border: none;
@@ -124,18 +129,6 @@
             border-radius: 5px;
             cursor: pointer;
             z-index: 1001;
-        }
-        .close-button {
-            display: none;
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: #4facfe;
-            color: #fff;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            cursor: pointer;
         }
         @media (max-width: 768px) {
             .container {
@@ -150,9 +143,6 @@
                 transition: left 0.3s ease, background 0.3s ease;
             }
             .toggle-button {
-                display: block;
-            }
-            .close-button {
                 display: block;
             }
         }
@@ -170,7 +160,6 @@
     <button class="toggle-button" onclick="toggleSidebar()">☰</button>
     <div class="container">
         <aside class="sidebar">
-            <button class="close-button" onclick="toggleSidebar()">✖</button>
             <div class="sidebar-title">About Me</div>
             <p>Short bio or additional content here.</p>
             <div class="sidebar-title">Blog Posts</div>
