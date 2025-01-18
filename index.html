@@ -63,19 +63,24 @@
             text-decoration: underline;
         }
         .blog-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .blog-post-container {
             background: #fff;
             padding: 1rem;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            height: 400px; /* Fixed height */
+            overflow: hidden;
         }
         .blog-post {
-            margin-bottom: 1.5rem;
+            height: 100%;
+            overflow-y: auto; /* Make content scrollable */
         }
-        .blog-post h2 {
+        .blog-post h2, .blog-post h3 {
             margin-top: 0;
-        }
-        .blog-post p {
-            margin-bottom: 0;
         }
         footer {
             background: #333;
@@ -106,41 +111,69 @@
             <p>Short bio or additional content here.</p>
             <nav>
                 <a href="#post1">Blog Post Title 1</a>
-                <a href="#post2">Blog Post Title 2</a>
-                <a href="#post3">Blog Post Title 3</a>
+                <a href="#post2">How Cryptocurrency is Shaping a Better Society: Benefits and Impact</a>
+                <a href="#post3">How Cryptocurrency Became the Pillar of Our Current State</a>
             </nav>
         </aside>
         <div class="blog-posts">
-            <div class="blog-post" id="post1">
-                <h2>Blog Post Title 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur lorem non eros malesuada, nec viverra nisi bibendum.</p>
+            <div class="blog-post-container">
+                <div class="blog-post" id="post1">
+                    <h2>Blog Post Title 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur lorem non eros malesuada, nec viverra nisi bibendum.</p>
+                </div>
             </div>
-            <div class="blog-post" id="post2">
-                <h2>How Cryptocurrency is Shaping a Better Society: Benefits and Impact</h2>
-                <h3>Introduction: The Rise of Cryptocurrency</h3>
-                <p>Cryptocurrency is changing the way we think about money. It’s more than just a digital currency; it’s a new way to manage and transfer wealth that challenges traditional financial systems. Built on blockchain technology, cryptocurrencies offer a decentralized, secure, and transparent way to exchange value. They’ve quickly become a global phenomenon, empowering individuals and businesses to take control of their finances. From enabling innovation to promoting financial independence, cryptocurrency is proving to be a major force in shaping the future. It’s no longer just a buzzword—it’s transforming how we interact with money and technology in everyday life.</p>
-            
-                <h3>Enhanced Security and Transparency</h3>
-                <p>Cryptocurrency has redefined trust in digital transactions by prioritizing security and transparency. Thanks to blockchain, every transaction is recorded on a public ledger, making it almost impossible to manipulate or alter. This transparency helps reduce fraud and ensures accountability, making the system fairer for everyone. Cryptocurrencies also use advanced encryption and decentralized storage to protect user data, providing a level of security that’s hard to beat. By cutting out intermediaries and relying on verifiable records, blockchain creates a more trustworthy environment. Its impact goes beyond finance, with applications in areas like healthcare, logistics, and even elections.</p>
-            
-                <h3>Fostering Innovation and Economic Growth</h3>
-                <p>Cryptocurrency isn’t just disrupting finance; it’s fueling innovation across industries. Blockchain technology is being used to improve efficiency and reduce costs in areas like healthcare, real estate, and supply chain management. Startups and entrepreneurs are leveraging this technology to develop groundbreaking solutions, from tokenizing assets to building decentralized applications. This surge of creativity is driving economic growth by attracting investments and creating new opportunities. By simplifying processes and cutting out unnecessary middlemen, blockchain benefits both businesses and consumers. As the technology advances, it opens the door to even more possibilities for societal progress.</p>
-            
-                <h3>Charity and Philanthropy in the Digital Age</h3>
-                <p>Cryptocurrencies are transforming the way people give to charity. Blockchain makes it easy to track donations, ensuring funds go exactly where they’re needed. This transparency builds trust between donors and organizations while reducing the risk of misuse. Crypto also eliminates middlemen, meaning charities can receive more of the money intended for them. From disaster relief to funding underserved causes, crypto-based platforms are helping people make a real difference. Plus, with its global reach, cryptocurrency enables anyone, anywhere, to contribute, creating a sense of shared responsibility and connection. It’s a modern way to make giving more impactful and efficient.</p>
-            
-                <h3>Environmental Impact and Sustainable Solutions</h3>
-                <p>While cryptocurrency has faced criticism for its energy usage, the industry is making strides toward sustainability. Many networks are switching to energy-efficient methods like Proof of Stake, which consume far less power than traditional mining. Renewable energy is also being integrated into mining operations to reduce the environmental impact. Projects focused on carbon credits and eco-friendly practices are helping to offset emissions. These innovations show that cryptocurrency can align with the growing push for greener technologies. It’s a work in progress, but the commitment to sustainability is a step in the right direction.</p>
-            
-                <h3>Challenges and Future Opportunities</h3>
-                <p>Cryptocurrency isn’t without its challenges. Unclear regulations, scalability issues, and price volatility make it a complex space to navigate. Governments are still figuring out how to balance regulation with innovation, while the technology itself needs to improve to support growing demand. There’s also a need for better public education to clear up misconceptions and encourage wider adoption. However, these challenges also present opportunities for progress. By working together, developers, regulators, and users can create a system that’s more accessible, reliable, and beneficial for everyone. The future of cryptocurrency is full of potential waiting to be unlocked.</p>
-            
-                <h3>Closing Thoughts</h3>
-                <p>Cryptocurrency is more than a trend—it’s a powerful tool that’s shaping a better future. It brings transparency, security, and innovation to areas that need it most, from finance to philanthropy. While there are hurdles to overcome, the industry’s focus on sustainability and collaboration is paving the way for meaningful change. As technology continues to evolve, cryptocurrencies have the potential to make financial systems more inclusive and equitable for all. Whether it’s improving global access to resources or sparking innovation across industries, cryptocurrency is proving that it can be a force for good in society.</p>
+            <div class="blog-post-container">
+                <div class="blog-post" id="post2">
+                    <h2>How Cryptocurrency is Shaping a Better Society: Benefits and Impact</h2>
+                    <h3>Introduction: The Rise of Cryptocurrency</h3>
+                    <p>Cryptocurrency is changing the way we think about money. It’s more than just a digital currency; it’s a new way to manage and transfer wealth that challenges traditional financial systems. Built on blockchain technology, cryptocurrencies offer a decentralized, secure, and transparent way to exchange value. They’ve quickly become a global phenomenon, empowering individuals and businesses to take control of their finances. From enabling innovation to promoting financial independence, cryptocurrency is proving to be a major force in shaping the future. It’s no longer just a buzzword—it’s transforming how we interact with money and technology in everyday life.</p>
+                
+                    <h3>Enhanced Security and Transparency</h3>
+                    <p>Cryptocurrency has redefined trust in digital transactions by prioritizing security and transparency. Thanks to blockchain, every transaction is recorded on a public ledger, making it almost impossible to manipulate or alter. This transparency helps reduce fraud and ensures accountability, making the system fairer for everyone. Cryptocurrencies also use advanced encryption and decentralized storage to protect user data, providing a level of security that’s hard to beat. By cutting out intermediaries and relying on verifiable records, blockchain creates a more trustworthy environment. Its impact goes beyond finance, with applications in areas like healthcare, logistics, and even elections.</p>
+                
+                    <h3>Fostering Innovation and Economic Growth</h3>
+                    <p>Cryptocurrency isn’t just disrupting finance; it’s fueling innovation across industries. Blockchain technology is being used to improve efficiency and reduce costs in areas like healthcare, real estate, and supply chain management. Startups and entrepreneurs are leveraging this technology to develop groundbreaking solutions, from tokenizing assets to building decentralized applications. This surge of creativity is driving economic growth by attracting investments and creating new opportunities. By simplifying processes and cutting out unnecessary middlemen, blockchain benefits both businesses and consumers. As the technology advances, it opens the door to even more possibilities for societal progress.</p>
+                
+                    <h3>Charity and Philanthropy in the Digital Age</h3>
+                    <p>Cryptocurrencies are transforming the way people give to charity. Blockchain makes it easy to track donations, ensuring funds go exactly where they’re needed. This transparency builds trust between donors and organizations while reducing the risk of misuse. Crypto also eliminates middlemen, meaning charities can receive more of the money intended for them. From disaster relief to funding underserved causes, crypto-based platforms are helping people make a real difference. Plus, with its global reach, cryptocurrency enables anyone, anywhere, to contribute, creating a sense of shared responsibility and connection. It’s a modern way to make giving more impactful and efficient.</p>
+                
+                    <h3>Environmental Impact and Sustainable Solutions</h3>
+                    <p>While cryptocurrency has faced criticism for its energy usage, the industry is making strides toward sustainability. Many networks are switching to energy-efficient methods like Proof of Stake, which consume far less power than traditional mining. Renewable energy is also being integrated into mining operations to reduce the environmental impact. Projects focused on carbon credits and eco-friendly practices are helping to offset emissions. These innovations show that cryptocurrency can align with the growing push for greener technologies. It’s a work in progress, but the commitment to sustainability is a step in the right direction.</p>
+                
+                    <h3>Challenges and Future Opportunities</h3>
+                    <p>Cryptocurrency isn’t without its challenges. Unclear regulations, scalability issues, and price volatility make it a complex space to navigate. Governments are still figuring out how to balance regulation with innovation, while the technology itself needs to improve to support growing demand. There’s also a need for better public education to clear up misconceptions and encourage wider adoption. However, these challenges also present opportunities for progress. By working together, developers, regulators, and users can create a system that’s more accessible, reliable, and beneficial for everyone. The future of cryptocurrency is full of potential waiting to be unlocked.</p>
+                
+                    <h3>Closing Thoughts</h3>
+                    <p>Cryptocurrency is more than a trend—it’s a powerful tool that’s shaping a better future. It brings transparency, security, and innovation to areas that need it most, from finance to philanthropy. While there are hurdles to overcome, the industry’s focus on sustainability and collaboration is paving the way for meaningful change. As technology continues to evolve, cryptocurrencies have the potential to make financial systems more inclusive and equitable for all. Whether it’s improving global access to resources or sparking innovation across industries, cryptocurrency is proving that it can be a force for good in society.</p>
+                </div>
             </div>
-            <div class="blog-post" id="post3">
-                <h2>Blog Post Title 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur lorem non eros malesuada, nec viverra nisi bibendum.</p>
+            <div class="blog-post-container">
+                <div class="blog-post" id="post3">
+                    <h2>How Cryptocurrency Became the Pillar of Our Current State</h2>
+                    <h3>Introduction: The Emergence of Cryptocurrency</h3>
+                    <p>Cryptocurrency has rapidly evolved from a niche concept to a cornerstone of modern finance and technology. Initially met with skepticism, it has now gained widespread acceptance and is reshaping how we perceive and interact with money. Built on the foundation of blockchain technology, cryptocurrencies offer a decentralized, secure, and transparent means of conducting transactions. This revolutionary approach has not only challenged traditional financial systems but also paved the way for new economic models and opportunities.</p>
+                
+                    <h3>Decentralization and Financial Freedom</h3>
+                    <p>One of the most significant impacts of cryptocurrency is its ability to decentralize financial power. By removing intermediaries such as banks and financial institutions, cryptocurrencies empower individuals to have full control over their assets. This decentralization promotes financial freedom and inclusivity, especially for those in regions with limited access to traditional banking services. It has opened up new avenues for peer-to-peer transactions, cross-border payments, and financial independence.</p>
+                
+                    <h3>Driving Technological Innovation</h3>
+                    <p>Cryptocurrency has been a catalyst for technological innovation, driving advancements in blockchain technology and beyond. The underlying principles of blockchain—transparency, security, and immutability—have found applications in various industries, from supply chain management to healthcare. Startups and established companies alike are leveraging blockchain to create innovative solutions that enhance efficiency, reduce costs, and improve security. This wave of innovation is fostering economic growth and attracting significant investments.</p>
+
+                    <h3>Transforming Investment and Fundraising</h3>
+                    <p>The rise of cryptocurrency has also transformed the landscape of investment and fundraising. Initial Coin Offerings (ICOs) and Security Token Offerings (STOs) have emerged as new methods for startups to raise capital. These fundraising mechanisms provide greater accessibility to investors and entrepreneurs, democratizing the investment process. Additionally, cryptocurrencies have introduced new asset classes, enabling diversification and new investment strategies. This transformation is reshaping the financial markets and creating new opportunities for wealth generation.</p>
+
+                    <h3>Enhancing Security and Trust</h3>
+                    <p>Security and trust are paramount in the digital age, and cryptocurrency has set new standards in these areas. Blockchain technology ensures that every transaction is recorded on a public ledger, making it nearly impossible to alter or manipulate. This transparency fosters trust among users and reduces the risk of fraud. Cryptocurrencies also employ advanced cryptographic techniques to secure transactions and protect user data. By prioritizing security and trust, cryptocurrency is building a more reliable and resilient financial ecosystem.</p>
+
+                    <h3>Challenges and Regulatory Landscape</h3>
+                    <p>Despite its many benefits, cryptocurrency faces several challenges, including regulatory uncertainty, scalability issues, and market volatility. Governments and regulatory bodies are still grappling with how to effectively regulate the cryptocurrency space without stifling innovation. Scalability remains a concern as the technology needs to evolve to handle increasing transaction volumes. Additionally, the volatile nature of cryptocurrency markets poses risks for investors. Addressing these challenges requires collaboration between stakeholders to create a balanced and sustainable regulatory framework.</p>
+
+                    <h3>Future Prospects and Opportunities</h3>
+                    <p>The future of cryptocurrency is filled with potential and opportunities. As technology continues to advance, we can expect to see further integration of cryptocurrency into everyday life. From decentralized finance (DeFi) platforms to non-fungible tokens (NFTs), the possibilities are vast. Continued innovation and collaboration will drive the growth of the cryptocurrency ecosystem, making it more accessible, efficient, and secure. The journey of cryptocurrency is just beginning, and its impact on our current state and future is profound.</p>
+
+                    <h3>Closing Thoughts</h3>
+                    <p>Cryptocurrency has undeniably become a pillar of our current state, influencing various aspects of finance, technology, and society. Its decentralized nature, coupled with the security and transparency of blockchain, has revolutionized how we conduct transactions and interact with money. While challenges remain, the ongoing advancements and growing acceptance of cryptocurrency signal a promising future. As we navigate this evolving landscape, cryptocurrency will continue to shape our world, driving innovation, financial freedom, and economic growth.</p>
+                </div>
             </div>
         </div>
     </div>
