@@ -23,9 +23,6 @@
             z-index: 1002;
             top: 0;
         }
-        header h1 {
-            margin: 0;
-        }
         nav {
             background: #0b8dff;
             color: #fff;
@@ -35,7 +32,7 @@
             font-weight: bold;
             position: sticky;
             z-index: 1001;
-            top: 4;
+            top: 3rem; /* Adjust top to be below the header */
         }
         nav a {
             color: #fff;
@@ -147,21 +144,14 @@
                 padding-left: 1rem;
                 font-size: 1.5rem;
             }
-<<<<<<< HEAD
-=======
-            nav {
-                position: sticky;
-                top: 4rem;
-                z-index: 1001;
             .container {
                 grid-template-columns: 1fr;
             }
             .sidebar {
                 left: -65%;
+            }
             .toggle-button {
                 display: block;
-                z-index: 1002;
-                position: sticky;
             }
         }
     </style>
@@ -188,7 +178,7 @@
                     <li><a href="#post3" onclick="toggleSidebar()">How Cryptocurrency Became the Pillar of Our Current State</a></li>
                 </ul>
             </nav>
-            <div class="sidebar-title">Quicklinks</div>
+            <div class="sidebar-title">Quick Links</div>
             <nav>
                 <ul>
                     <li><a href="https://insider.hotcoin.com/" onclick="toggleSidebar()">Insider Hotcoin</a></li>
