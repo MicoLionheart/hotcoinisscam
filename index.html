@@ -19,20 +19,15 @@
             color: #fff;
             padding: 1rem 0;
             text-align: center;
-            position: sticky;
-            z-index: 1002;
-            top: 0;
+        }
+        header h1 {
+            margin: 0;
         }
         nav {
-            background: #0b8dff;
+            background: #4facfe;
             color: #fff;
             padding: 0.5rem 0;
             text-align: center;
-            font-size: 1.2rem;
-            font-weight: bold;
-            position: sticky;
-            z-index: 1001;
-            top: 3rem; /* Adjust top to be below the header */
         }
         nav a {
             color: #fff;
@@ -51,47 +46,22 @@
             padding: 0 1rem;
         }
         .sidebar {
-            background: linear-gradient(to right, #4facfe, #00f2fe);
+            background: #fff;
             padding: 1rem;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            color: #fff;
-            transition: background 0.3s ease;
-            position: fixed;
-            width: 65%;
-            height: 100%;
-            z-index: 1000;
-            left: -100%;
-            overflow-y: auto;
-        }
-        .sidebar:hover {
-            background: linear-gradient(to right, #3a8bdb, #00c2e0);
-        }
-        .sidebar .sidebar-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #fff;
-            font-weight: bold;
         }
         .sidebar nav {
             display: flex;
             flex-direction: column;
             background: transparent;
         }
-        .sidebar nav ul {
-            list-style-type: disc;
-            padding-left: 1.5rem;
-            text-align: left;
-        }
-        .sidebar nav ul li {
+        .sidebar nav a {
             margin: 0.5rem 0;
-        }
-        .sidebar nav ul li a {
-            color: #fff;
+            color: #4facfe;
             text-decoration: none;
-            background: none;
         }
-        .sidebar nav ul li a:hover {
+        .sidebar nav a:hover {
             text-decoration: underline;
         }
         .blog-posts {
@@ -104,7 +74,7 @@
             padding: 1rem;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            height: 400px;
+            height: 400px; /* Fixed height */
             overflow: hidden;
         }
         .blog-post {
@@ -121,37 +91,9 @@
             padding: 1rem 0;
             margin-top: 2rem;
         }
-        .toggle-button {
-            display: none;
-            position: fixed;
-            top: 1rem;
-            right: 1rem; /* Move to the right side */
-            background: #4facfe;
-            color: #fff;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 1001;
-        }
         @media (max-width: 768px) {
-            header {
-                text-align: left;
-            }
-            header h1 {
-                margin: 0;
-                text-align: left;
-                padding-left: 1rem;
-                font-size: 1.5rem;
-            }
             .container {
                 grid-template-columns: 1fr;
-            }
-            .sidebar {
-                left: -65%;
-            }
-            .toggle-button {
-                display: block;
             }
         }
     </style>
@@ -159,7 +101,6 @@
 <body>
     <header>
         <h1>Welcome to My Blog</h1>
-        <button class="toggle-button" onclick="toggleSidebar()">☰</button>
     </header>
     <nav>
         <a href="/hotcoinisscam/">Home</a>
@@ -168,23 +109,12 @@
     </nav>
     <div class="container">
         <aside class="sidebar">
-            <div class="sidebar-title">About Me</div>
+            <h2>About Me</h2>
             <p>Short bio or additional content here.</p>
-            <div class="sidebar-title">Blog Posts</div>
             <nav>
-                <ul>
-                    <li><a href="#post1" onclick="toggleSidebar()">Blog Post Title 1</a></li>
-                    <li><a href="#post2" onclick="toggleSidebar()">How Cryptocurrency is Shaping a Better Society: Benefits and Impact</a></li>
-                    <li><a href="#post3" onclick="toggleSidebar()">How Cryptocurrency Became the Pillar of Our Current State</a></li>
-                </ul>
-            </nav>
-            <div class="sidebar-title">Quick Links</div>
-            <nav>
-                <ul>
-                    <li><a href="https://insider.hotcoin.com/" onclick="toggleSidebar()">Insider Hotcoin</a></li>
-                    <li><a href="https://news.hotcoin.com/" onclick="toggleSidebar()">Hotcoin News</a></li>
-                    <li><a href="https://forum.hotcoin.com/" onclick="toggleSidebar()">Hotcoin Forum</a></li>
-                </ul>
+                <a href="#post1">Blog Post Title 1</a>
+                <a href="#post2">How Cryptocurrency is Shaping a Better Society: Benefits and Impact</a>
+                <a href="#post3">How Cryptocurrency Became the Pillar of Our Current State</a>
             </nav>
         </aside>
         <div class="blog-posts">
@@ -252,15 +182,5 @@
     <footer>
         <p>&copy; 2025 My Blog. All rights reserved.</p>
     </footer>
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            if (sidebar.style.left === '0px') {
-                sidebar.style.left = '-100%';
-            } else {
-                sidebar.style.left = '0';
-            }
-        }
-    </script>
 </body>
 </html>
