@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+
+Sitemap: https://micolionheart.github.io/hotcoinisscam/sitemap.xml
