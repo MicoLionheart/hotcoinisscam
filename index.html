@@ -28,6 +28,8 @@
             color: #fff;
             padding: 0.5rem 0;
             text-align: center;
+            font-size: 1.2rem; /* Increase font size */
+            font-weight: bold; /* Make font bold */
         }
         nav a {
             color: #fff;
@@ -46,22 +48,41 @@
             padding: 0 1rem;
         }
         .sidebar {
-            background: #fff;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
             padding: 1rem;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: #fff;
+            transition: background 0.3s ease;
+        }
+        .sidebar:hover {
+            background: linear-gradient(to right, #3a8bdb, #00c2e0);
+        }
+        .sidebar .sidebar-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            font-weight: bold;
         }
         .sidebar nav {
             display: flex;
             flex-direction: column;
             background: transparent;
         }
-        .sidebar nav a {
-            margin: 0.5rem 0;
-            color: #4facfe;
-            text-decoration: none;
+        .sidebar nav ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            text-align: left;
         }
-        .sidebar nav a:hover {
+        .sidebar nav ul li {
+            margin: 0.5rem 0;
+        }
+        .sidebar nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            background: none;
+        }
+        .sidebar nav ul li a:hover {
             text-decoration: underline;
         }
         .blog-posts {
@@ -74,7 +95,7 @@
             padding: 1rem;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            height: 400px; /* Fixed height */
+            height: 400px;
             overflow: hidden;
         }
         .blog-post {
@@ -95,6 +116,14 @@
             .container {
                 grid-template-columns: 1fr;
             }
+            .sidebar {
+                position: fixed;
+                width: 65%;
+                height: 100%;
+                z-index: 1000;
+                left: -65%;
+                transition: left 0.3s ease, background 0.3s ease;
+            }
         }
     </style>
 </head>
@@ -109,12 +138,23 @@
     </nav>
     <div class="container">
         <aside class="sidebar">
-            <h2>About Me</h2>
+            <div class="sidebar-title">About Me</div>
             <p>Short bio or additional content here.</p>
+            <div class="sidebar-title">Blog Posts</div>
             <nav>
-                <a href="#post1">Blog Post Title 1</a>
-                <a href="#post2">How Cryptocurrency is Shaping a Better Society: Benefits and Impact</a>
-                <a href="#post3">How Cryptocurrency Became the Pillar of Our Current State</a>
+                <ul>
+                    <li><a href="#post1" onclick="toggleSidebar()">Blog Post Title 1</a></li>
+                    <li><a href="#post2" onclick="toggleSidebar()">How Cryptocurrency is Shaping a Better Society: Benefits and Impact</a></li>
+                    <li><a href="#post3" onclick="toggleSidebar()">How Cryptocurrency Became the Pillar of Our Current State</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-title">Quicklinks</div>
+            <nav>
+                <ul>
+                    <li><a href="https://insider.hotcoin.com/" onclick="toggleSidebar()">Insider Hotcoin</a></li>
+                    <li><a href="https://news.hotcoin.com/" onclick="toggleSidebar()">Hotcoin News</a></li>
+                    <li><a href="https://forum.hotcoin.com/" onclick="toggleSidebar()">Hotcoin Forum</a></li>
+                </ul>
             </nav>
         </aside>
         <div class="blog-posts">
